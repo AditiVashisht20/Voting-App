@@ -43,8 +43,18 @@ public class myaccount extends javax.swing.JFrame {
         });
 
         button2.setLabel("Add new Candidate");
+        button2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button2ActionPerformed(evt);
+            }
+        });
 
         button3.setLabel("Edit candidate");
+        button3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button3ActionPerformed(evt);
+            }
+        });
 
         button4.setLabel("Delete Candidate");
         button4.addActionListener(new java.awt.event.ActionListener() {
@@ -90,6 +100,8 @@ public class myaccount extends javax.swing.JFrame {
 
     private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
         // TODO add your handling code here:
+        AddParty obj4  = new AddParty();
+        obj4.setVisible(true);
         
     }//GEN-LAST:event_button1ActionPerformed
 
@@ -98,6 +110,18 @@ public class myaccount extends javax.swing.JFrame {
         deleteCandidate obj1=new deleteCandidate();
         obj1.setVisible(true);
     }//GEN-LAST:event_button4ActionPerformed
+
+    private void button3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button3ActionPerformed
+            editcandidate obj2=new editcandidate();
+            obj2.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_button3ActionPerformed
+
+    private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed
+        // TODO add your handling code here:
+        AddCandidate obj3= new AddCandidate();
+        obj3.setVisible(true);
+    }//GEN-LAST:event_button2ActionPerformed
 
     /**
      * @param args the command line arguments
