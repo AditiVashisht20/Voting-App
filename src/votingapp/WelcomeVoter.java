@@ -20,6 +20,8 @@ public class WelcomeVoter extends javax.swing.JFrame {
         vid=id;
         this.name=name;
         this.city=city;
+        //System.out.println(name);
+        welcome.setText("Welcome " +name);
     }
 
     /**
@@ -53,7 +55,7 @@ public class WelcomeVoter extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        label1 = new java.awt.Label();
+        welcome = new java.awt.Label();
         c1 = new java.awt.Choice();
         label2 = new java.awt.Label();
         l1 = new java.awt.Label();
@@ -63,7 +65,7 @@ public class WelcomeVoter extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        label1.setText("Welcome");
+        welcome.setText("Welcome");
 
         label2.setText("Select Party Name");
 
@@ -105,7 +107,7 @@ public class WelcomeVoter extends javax.swing.JFrame {
                         .addGap(137, 137, 137)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(welcome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(152, 152, 152)
                         .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -118,7 +120,7 @@ public class WelcomeVoter extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(welcome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(c1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(20, 20, 20)
@@ -142,7 +144,7 @@ public class WelcomeVoter extends javax.swing.JFrame {
             int cid;
             String partyname;
             cid=Integer.parseInt(l1.getText());
-            String q="select * from tbvoting where id=?";
+            String q="select * from tbvoting where VoterID=?";
             PreparedStatement pst= obj.db.prepareStatement(q);
             pst.setInt(1,vid);
             ResultSet rst=pst.executeQuery();
@@ -153,7 +155,7 @@ public class WelcomeVoter extends javax.swing.JFrame {
             else
             {
                 partyname=c1.getSelectedItem();
-                String p="select *from tbparty where partyname=?";
+                String p="select * from tbparty where partyname=?";
                 PreparedStatement pst2=obj.db.prepareStatement(p);
                 pst2.setString(1,partyname);
                 ResultSet rs2=pst2.executeQuery();
@@ -166,7 +168,7 @@ public class WelcomeVoter extends javax.swing.JFrame {
                     pstr.setInt(2,cid);
                     pstr.setInt(3, pid);
                     pstr.executeUpdate();
-            }
+                }
             }
             //String q="insert id,voterid,candidateid from "
         }
@@ -189,16 +191,15 @@ public class WelcomeVoter extends javax.swing.JFrame {
             if(rs.next())
             {
                 int pid=rs.getInt("id");
-                String q1="select *from tbcandidate where partyid=? and city=?";
+                String q1="select * from tbcandidate where partyid=? and city=?";
                 PreparedStatement pst1= obj.db.prepareStatement(q1);
                 pst1.setInt(1,pid);
                 pst1.setString(2,city);
                 ResultSet rs1=pst1.executeQuery();
                 if(rs1.next())
                 {
-                
-                l1.setText(rs1.getInt("id")+"");
-                l2.setText(rs1.getString("CandidateName"));
+                    l1.setText(rs1.getInt("id")+"");
+                    l2.setText(rs1.getString("CandidateName"));
                 }
             }
         }
@@ -251,7 +252,7 @@ public class WelcomeVoter extends javax.swing.JFrame {
     private java.awt.Choice c1;
     private java.awt.Label l1;
     private java.awt.Label l2;
-    private java.awt.Label label1;
     private java.awt.Label label2;
+    private java.awt.Label welcome;
     // End of variables declaration//GEN-END:variables
 }

@@ -140,7 +140,7 @@ public class LoginVoter extends javax.swing.JFrame {
                 
                 if(num.equals(adno))
                {
-                  // System.out.println("hifif");
+                  
                    WelcomeVoter obj2= new WelcomeVoter(id,rs.getString(2),rs.getString(3));
                    obj2.setVisible(true);
                    System.out.println("hey");
