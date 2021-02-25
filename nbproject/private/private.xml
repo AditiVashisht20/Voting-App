@@ -3,17 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/aditi/Documents/NetBeansProjects/VotingApp/src/votingapp/viewCandidate.java</file>
-            <file>file:/C:/Users/aditi/Documents/NetBeansProjects/VotingApp/src/votingapp/VotingApp.java</file>
-            <file>file:/C:/Users/aditi/Documents/NetBeansProjects/VotingApp/src/votingapp/login.java</file>
-            <file>file:/C:/Users/aditi/Documents/NetBeansProjects/VotingApp/src/votingapp/AddCandidate.java</file>
-            <file>file:/C:/Users/aditi/Documents/NetBeansProjects/VotingApp/src/votingapp/LoginVoter.java</file>
-            <file>file:/C:/Users/aditi/Documents/NetBeansProjects/VotingApp/src/votingapp/EditVoter.java</file>
-            <file>file:/C:/Users/aditi/Documents/NetBeansProjects/VotingApp/src/votingapp/editcandidate.java</file>
-            <file>file:/C:/Users/aditi/Documents/NetBeansProjects/VotingApp/src/votingapp/VotingResult.java</file>
-            <file>file:/C:/Users/aditi/Documents/NetBeansProjects/VotingApp/src/votingapp/myaccount.java</file>
-            <file>file:/C:/Users/aditi/Documents/NetBeansProjects/VotingApp/src/votingapp/AddParty.java</file>
-            <file>file:/C:/Users/aditi/Documents/NetBeansProjects/VotingApp/src/votingapp/WelcomeVoter.java</file>
+            <file>file:/E:/Voting-App/src/votingapp/AddCandidate.java</file>
+            <file>file:/E:/Voting-App/src/votingapp/myconnection.java</file>
+            <file>file:/E:/Voting-App/src/votingapp/login.java</file>
+            <file>file:/E:/Voting-App/src/votingapp/VotingResult.java</file>
+            <file>file:/E:/Voting-App/src/votingapp/LoginOptions.java</file>
+            <file>file:/E:/Voting-App/src/votingapp/LoginVoter.java</file>
+            <file>file:/E:/Voting-App/src/votingapp/VotingApp.java</file>
         </group>
     </open-files>
 </project-private>

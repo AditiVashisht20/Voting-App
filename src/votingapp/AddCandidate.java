@@ -22,7 +22,7 @@ public class AddCandidate extends javax.swing.JFrame {
     try
     {
         
-        String p="select id from tbparty";
+        String p="select * from tbparty";
        PreparedStatement pst= obj.db.prepareStatement(p);
        ResultSet rs=pst.executeQuery();
        while(rs.next())
@@ -222,7 +222,7 @@ public class AddCandidate extends javax.swing.JFrame {
         try
         {
             int age;
-            String pid=c1.getSelectedItem();
+            String partyid=c1.getSelectedItem();
             String candname,city,edu,adharno,add,cont,gender,email;
             candname=t2.getText();
             city=t3.getText();
@@ -248,7 +248,7 @@ public class AddCandidate extends javax.swing.JFrame {
                 pst.setString(7,cont);
                 pst.setString(8,gender);
                 pst.setString(9,email);
-                pst.setString(10,pid);
+                pst.setString(10,partyid);
                 pst.executeUpdate();
                 dispose();
             }
